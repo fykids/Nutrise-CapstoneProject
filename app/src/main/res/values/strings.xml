@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Nutrise</string>
+    <string name="logo">logo</string>
+
+    <string name="title_onboarding1">Play Anywhere</string>
+    <string name="description_onboarding1">The video call feature can be accessed from anywhere in your house to help you.</string>
+
+    <string name="title_onboarding2">Stay Healthy</string>
+    <string name="description_onboarding2">Nobody likes to be alone and the built-in group video call feature helps you connect.</string>
+
+    <string name="title_onboarding3">Make Connections</string>
+    <string name="description_onboarding3">While working the app reminds you to smile, laugh, walk and talk with those who matters.</string>
+    <string name="button_text">Continue</string>
+    <string name="page_login">Login</string>
+    <string name="desc_login">Asupan nutrisi yang baik dapat membantu menjaga kesehatan tubuh secara menyeluruh</string>
+    <string name="page_register">Register</string>
+    <string name="desc_register">Ayo daftarkan dirimu untuk memastikan asupan nutrisi kamu terpenuhi!</string>
+
+</resources>

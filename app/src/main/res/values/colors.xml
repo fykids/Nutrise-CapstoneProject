@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+<!--    Theme-->
+    <color name="ColorOnPrimary_Light">#70C16C</color>
+    <color name="ColorOnSecondary_Light">#9DAE9C</color>
+    <color name="ColorPrimary">#43A13E</color>
+    <color name="ColorSecondary">#D9D9D9</color>
+    <color name="ColorOnError">#DE724E</color>
+    <color name="ColorError">#FF5353</color>
+    <color name="ColorSurf">#444444</color>
+</resources>

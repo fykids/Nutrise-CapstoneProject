@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "226913672824",
+    "project_id": "nutrise-dc7c9",
+    "storage_bucket": "nutrise-dc7c9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:226913672824:android:8cce0e7c63126c40d4178d",
+        "android_client_info": {
+          "package_name": "com.capstone.nutrise"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQduxt2PPz8nWucTkDUZHQ1FENBvkvD4I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
