@@ -36,6 +36,7 @@ class HomeActivity : AppCompatActivity() {
         }
 
         val user = Firebase.auth.currentUser
+        user
 
         binding.nameUser.text = user?.email.toString()
         binding.btnLogout.setOnClickListener {
