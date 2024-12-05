@@ -18,6 +18,7 @@ class SplashScreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySplashScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
+//      Ini apa ya
 
         Handler(Looper.getMainLooper()).postDelayed({
             startActivity(Intent(this, OnBoardingActivity::class.java))
