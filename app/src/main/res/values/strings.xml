@@ -15,5 +15,12 @@
     <string name="desc_login">Asupan nutrisi yang baik dapat membantu menjaga kesehatan tubuh secara menyeluruh</string>
     <string name="page_register">Register</string>
     <string name="desc_register">Ayo daftarkan dirimu untuk memastikan asupan nutrisi kamu terpenuhi!</string>
+    <string name="keluar">Keluar</string>
+    <string name="mode_malam">Mode Malam</string>
+    <string name="akun">Akun</string>
+    <string name="privasi">Privasi</string>
+    <string name="result_history">0</string>
+    <string name="riwayat">Riwayat</string>
+    <string name="appsName">Nutrise</string>
 
 </resources>
