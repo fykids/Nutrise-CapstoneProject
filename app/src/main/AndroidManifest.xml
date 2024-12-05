@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Nutrise"
         tools:targetApi="31">
         <activity
+            android:name=".view.settings.SettingActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.home.HomeActivity"
             android:exported="true">
             <intent-filter>
@@ -34,7 +37,7 @@
             android:exported="false" />
         <activity
             android:name=".SplashScreenActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
     </application>
 
 </manifest>
