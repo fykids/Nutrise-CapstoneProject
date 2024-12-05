@@ -2,6 +2,8 @@
     <string name="app_name">Nutrise</string>
     <string name="logo">logo</string>
 
+    <string name="selamat_datang">Selamat Datang</string>
+
     <string name="title_onboarding1">Play Anywhere</string>
     <string name="description_onboarding1">The video call feature can be accessed from anywhere in your house to help you.</string>
 
