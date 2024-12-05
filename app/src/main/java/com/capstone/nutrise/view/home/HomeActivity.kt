@@ -9,10 +9,10 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.capstone.nutrise.R
 import com.capstone.nutrise.databinding.ActivityHomeBinding
-import com.capstone.nutrise.view.onboarding.OnBoardingActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import com.capstone.nutrise.view.onboarding.OnBoardingActivity
 
 class HomeActivity : AppCompatActivity() {
     private lateinit var binding : ActivityHomeBinding

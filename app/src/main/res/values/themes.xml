@@ -3,6 +3,10 @@
     <style name="Base.Theme.Nutrise" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <item name="android:windowSplashScreenBackground" tools:targetApi="s">@color/white</item>
+        <item name="android:windowSplashScreenAnimatedIcon" tools:targetApi="s">@drawable/logo</item>
+        <item name="android:windowSplashScreenAnimationDuration" tools:targetApi="s">1000</item>
     </style>
 
     <style name="Theme.Nutrise" parent="Base.Theme.Nutrise" />

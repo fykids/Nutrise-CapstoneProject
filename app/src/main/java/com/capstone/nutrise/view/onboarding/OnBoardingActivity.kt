@@ -2,11 +2,10 @@ package com.capstone.nutrise.view.onboarding
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.View
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.viewpager2.widget.ViewPager2
 import com.capstone.nutrise.R
 import com.capstone.nutrise.databinding.ActivityOnBoardingBinding
@@ -19,17 +18,13 @@ class OnBoardingActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var viewPager : ViewPager2
     private lateinit var adapter : ItemAdapter
     private lateinit var binding : ActivityOnBoardingBinding
+    private val handler = Handler(Looper.getMainLooper())
+    private lateinit var runnable : Runnable
 
     override fun onCreate(savedInstanceState : Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityOnBoardingBinding.inflate(layoutInflater)
-        enableEdgeToEdge()
         setContentView(binding.root)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
 
         // Data onboarding yang diambil dari drawable dan strings.xml
         val onboardingItems = listOf(
@@ -55,7 +50,22 @@ class OnBoardingActivity : AppCompatActivity(), View.OnClickListener {
         viewPager = binding.vpImage
         viewPager.adapter = adapter
 
+//        SetupAutoSlide
+        setupAutoSlide()
+
         binding.button.setOnClickListener(this)
+    }
+
+    private fun setupAutoSlide() {
+        runnable = Runnable {
+            val currentItem = viewPager.currentItem
+            val nextItem = if (currentItem == adapter.itemCount - 1) 0 else currentItem + 1
+            nextItem as Int
+            viewPager.setCurrentItem(nextItem, true)
+            handler.postDelayed(runnable, 5000) //jeda 5 detik
+        }
+
+        handler.postDelayed(runnable, 5000)
     }
 
     override fun onClick(v : View) {
