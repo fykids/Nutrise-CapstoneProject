@@ -2,8 +2,6 @@
     <string name="app_name">Nutrise</string>
     <string name="logo">logo</string>
 
-    <string name="selamat_datang">Selamat Datang</string>
-
     <string name="title_onboarding1">Play Anywhere</string>
     <string name="description_onboarding1">The video call feature can be accessed from anywhere in your house to help you.</string>
 
@@ -17,5 +15,16 @@
     <string name="desc_login">Asupan nutrisi yang baik dapat membantu menjaga kesehatan tubuh secara menyeluruh</string>
     <string name="page_register">Register</string>
     <string name="desc_register">Ayo daftarkan dirimu untuk memastikan asupan nutrisi kamu terpenuhi!</string>
+    <string name="keluar">Keluar</string>
+    <string name="mode_malam">Mode Malam</string>
+    <string name="akun">Akun</string>
+    <string name="privasi">Privasi</string>
+    <string name="result_history">0</string>
+    <string name="riwayat">Riwayat</string>
+    <string name="appsName">Nutrise</string>
+
+    <string name="mulai">Mulai sekarang</string>
+    <string name="title_home">HOME</string>
+    <string name="title_setting">SETTINGS</string>
 
 </resources>
