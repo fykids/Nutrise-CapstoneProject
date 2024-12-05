@@ -7,11 +7,7 @@ import android.util.Log
 import android.view.WindowInsets
 import android.view.WindowManager
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.capstone.nutrise.R
 import com.capstone.nutrise.databinding.ActivityLoginBinding
 import com.capstone.nutrise.view.auth.register.RegisterActivity
 import com.capstone.nutrise.view.home.HomeActivity
@@ -44,7 +40,7 @@ class LoginActivity : AppCompatActivity() {
             loginUser(email, password)
         }
 
-        binding.buttonRegister.setOnClickListener{
+        binding.buttonRegister.setOnClickListener {
             startActivity(Intent(this, RegisterActivity::class.java))
         }
     }
