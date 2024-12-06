@@ -4,11 +4,23 @@
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
 
-        <item name="android:windowSplashScreenBackground" tools:targetApi="s">@color/white</item>
-        <item name="android:windowSplashScreenAnimatedIcon" tools:targetApi="s">@drawable/logo</item>
-        <item name="android:windowSplashScreenAnimationDuration" tools:targetApi="s">1000</item>
+        <item name="colorOnPrimary">@color/ColorPrimary</item>
+        <item name="colorOnSecondary">@color/ColorSecondary</item>
+        <item name="colorOnBackground">@color/white</item>
     </style>
-    
+
+    <style name="TextColor">
+        <item name="android:textColor">@color/ColorDark</item>
+    </style>
+
+    <style name="IconStyle">
+        <item name="color">@color/ColorDark</item>
+    </style>
+
+    <style name="ColorContainer">
+        <item name="colorOnBackground">@color/white</item>
+    </style>
+
     <style name="SlideActivityAnimation" parent="@android:style/Animation.Activity">
         <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
         <item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>

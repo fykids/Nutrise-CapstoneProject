@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
 import android.widget.Toast
@@ -35,7 +36,7 @@ class RegisterActivity : AppCompatActivity() {
                 Toast.makeText(this, "Email/Password tidak boleh kosong", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-
+            showLoading(true)
             registerUser(email, password)
         }
 
@@ -85,6 +86,16 @@ class RegisterActivity : AppCompatActivity() {
             )
         }
         supportActionBar?.hide()
+    }
+
+    private fun showLoading(isLoading: Boolean) {
+        if (isLoading) {
+            binding.buttonLogin.isEnabled = false
+            binding.loadingLottie?.visibility = View.VISIBLE
+        } else {
+            binding.buttonLogin.isEnabled = true
+            binding.loadingLottie?.visibility = View.GONE
+        }
     }
 
     companion object {
