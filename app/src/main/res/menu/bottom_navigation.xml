@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeMenu"
+        android:icon="@drawable/baseline_home_filled_24"
+        android:title="Beranda" />
+
+    <item
+        android:id="@+id/settingMenu"
+        android:icon="@drawable/baseline_settings_24"
+        android:title="Pengaturan" />
+</menu>
