@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
 import android.widget.Toast
@@ -37,6 +38,7 @@ class LoginActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
+            showLoading(true)
             loginUser(email, password)
         }
 
@@ -87,6 +89,16 @@ class LoginActivity : AppCompatActivity() {
             )
         }
         supportActionBar?.hide()
+    }
+
+    private fun showLoading(isLoading: Boolean) {
+        if (isLoading) {
+            binding.buttonLogin.isEnabled = false
+            binding.loadingLottie?.visibility = View.VISIBLE
+        } else {
+            binding.buttonLogin.isEnabled = true
+            binding.loadingLottie?.visibility = View.GONE
+        }
     }
 
     companion object {
