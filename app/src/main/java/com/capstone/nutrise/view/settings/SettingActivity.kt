@@ -85,7 +85,7 @@ class SettingActivity : AppCompatActivity() {
         if (isNightMode) {
             nightModeIcon.setImageResource(R.drawable.baseline_light_mode_24) // Ganti dengan ikon mode aktif
         } else {
-            nightModeIcon.setImageResource(R.drawable.mode_night) // Ganti dengan ikon default
+            nightModeIcon.setImageResource(R.drawable.baseline_mode_night_dark) // Ganti dengan ikon default
         }
     }
 
