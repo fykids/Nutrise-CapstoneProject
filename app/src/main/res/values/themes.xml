@@ -14,7 +14,7 @@
     </style>
 
     <style name="IconStyle">
-        <item name="color">@color/ColorDark</item>
+        <item name="android:tint">@color/ColorDark</item>
     </style>
 
     <style name="ColorContainer">
