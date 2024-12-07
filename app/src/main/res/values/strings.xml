@@ -27,5 +27,7 @@
     <string name="logo_aplikasi">logo aplikasi</string>
     <string name="textHistory">0</string>
     <string name="logout">logout</string>
+    <string name="nama">Nama</string>
+    <string name="password">Password</string>
 
 </resources>

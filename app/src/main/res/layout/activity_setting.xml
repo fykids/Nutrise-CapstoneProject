@@ -8,6 +8,15 @@
     android:background="?attr/colorOnBackground"
     tools:context=".view.settings.SettingActivity">
 
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -20,12 +29,12 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="24dp"
+            android:layout_height="40dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:contentDescription="@string/logo_aplikasi"
-            android:src="@drawable/logo_for_toolbar" />
+            android:src="@drawable/logo"/>
 
         <TextView
             style="@style/TextColor"
@@ -115,7 +124,7 @@
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
 
     <RelativeLayout
-        android:id="@+id/relativeLayout2"
+        android:id="@+id/userSetting"
         android:layout_width="0dp"
         android:layout_height="54dp"
         android:layout_marginStart="24dp"
@@ -159,7 +168,7 @@
         android:paddingEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2">
+        app:layout_constraintTop_toBottomOf="@+id/userSetting">
 
         <ImageView
             android:id="@+id/imageNightMode"
@@ -171,6 +180,7 @@
             android:src="@drawable/baseline_mode_night_dark" />
 
         <TextView
+            android:id="@+id/textMode"
             style="@style/TextColor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -223,7 +233,7 @@
         app:itemIconSize="30dp"
         app:itemIconTint="@drawable/item_selector"
         app:itemTextColor="@drawable/item_selector"
-        app:labelVisibilityMode="labeled"
+        app:labelVisibilityMode="selected"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

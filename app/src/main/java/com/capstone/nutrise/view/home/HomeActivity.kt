@@ -66,8 +66,9 @@ class HomeActivity : AppCompatActivity() {
 
                 R.id.settingMenu -> {
                     val intent = Intent(this, SettingActivity::class.java)
-                    intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
+                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
                     startActivity(intent)
+                    finish()
                     overridePendingTransition(0, 0)
                     true
                 }
