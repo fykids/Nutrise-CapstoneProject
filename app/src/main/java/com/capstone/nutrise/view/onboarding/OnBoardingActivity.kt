@@ -1,10 +1,13 @@
 package com.capstone.nutrise.view.onboarding
 
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.View
+import android.view.WindowInsets
+import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.capstone.nutrise.R
@@ -25,6 +28,8 @@ class OnBoardingActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         binding = ActivityOnBoardingBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupView()
 
         // Data onboarding yang diambil dari drawable dan strings.xml
         val onboardingItems = listOf(
@@ -56,11 +61,23 @@ class OnBoardingActivity : AppCompatActivity(), View.OnClickListener {
         binding.button.setOnClickListener(this)
     }
 
+    private fun setupView() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            window.insetsController?.hide(WindowInsets.Type.statusBars())
+        } else {
+            @Suppress("DEPRECATION")
+            window.setFlags(
+                WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN
+            )
+        }
+        supportActionBar?.hide()
+    }
+
     private fun setupAutoSlide() {
         runnable = Runnable {
             val currentItem = viewPager.currentItem
             val nextItem = if (currentItem == adapter.itemCount - 1) 0 else currentItem + 1
-            nextItem as Int
             viewPager.setCurrentItem(nextItem, true)
             handler.postDelayed(runnable, 5000) //jeda 5 detik
         }
