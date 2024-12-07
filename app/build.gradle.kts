@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.google.gms.google.services)
+    id("kotlin-parcelize")
 }
 
 android {
@@ -55,8 +56,12 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation("androidx.fragment:fragment-ktx:1.5.7")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.core:core-splashscreen:1.0.0")
+
+//    datastore
+    implementation("androidx.datastore:datastore-preferences:1.0.0")
 
     implementation("com.github.bumptech.glide:glide:4.15.0")
     annotationProcessor("com.github.bumptech.glide:compiler:4.15.0")
@@ -74,7 +79,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2")
 
 //    animate
-    val lottieVersion = "6.0.0"
-    implementation ("com.airbnb.android:lottie:$lottieVersion")
+    val lottieVersion = "6.6.1"
+    implementation("com.airbnb.android:lottie:$lottieVersion")
 
 }

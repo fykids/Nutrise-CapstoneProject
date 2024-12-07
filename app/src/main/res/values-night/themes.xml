@@ -17,6 +17,6 @@
     </style>
 
     <style name="ColorContainer">
-        <item name="colorOnBackground">#343434</item>
+        <item name="colorOnBackground">@android:color/transparent</item>
     </style>
 </resources>
