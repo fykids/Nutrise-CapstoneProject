@@ -35,13 +35,11 @@
             android:text="@string/appsName"
             android:textSize="18sp"
             android:textStyle="bold" />
-        <!--        coba-->
+
     </androidx.appcompat.widget.Toolbar>
 
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/nameUser"
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="48dp"
