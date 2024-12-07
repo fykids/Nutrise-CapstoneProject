@@ -23,5 +23,11 @@
     <string name="privasi">Privasi</string>
     <string name="riwayat">Riwayat</string>
     <string name="appsName">Nutrise</string>
+    <string name="name_user">Team Capstone</string>
+    <string name="logo_aplikasi">logo aplikasi</string>
+    <string name="textHistory">0</string>
+    <string name="logout">logout</string>
+    <string name="nama">Nama</string>
+    <string name="password">Password</string>
 
 </resources>
