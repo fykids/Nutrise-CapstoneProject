@@ -98,6 +98,12 @@ class SettingActivity : AppCompatActivity() {
                 val updatedIsNightMode = settingViewModel.isNightMode.first()
                 updateNightModeUI(updatedIsNightMode)
                 setAppNightMode(updatedIsNightMode)
+
+                // Log status mode malam setelah perubahan
+                Log.d(TAG, "Mode malam diubah menjadi: $updatedIsNightMode")
+
+                // Simpan preferensi mode malam
+                saveNightModePreference(updatedIsNightMode)
             }
         }
     }
@@ -107,13 +113,19 @@ class SettingActivity : AppCompatActivity() {
         if (isNightMode) {
             nightModeIcon.setImageResource(R.drawable.baseline_light_mode_24)
             binding.textMode.text = "Mode Siang"
-            setAppNightMode(true)
         } else {
             nightModeIcon.setImageResource(R.drawable.baseline_mode_night_dark)
             binding.textMode.text = "Mode Malam"
-            setAppNightMode(false)
         }
     }
+
+    fun saveNightModePreference(isNightMode: Boolean) {
+        val sharedPreferences = getSharedPreferences("app_preferences", MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.putBoolean("NIGHT_MODE", isNightMode)
+        editor.apply()
+    }
+
 
     private fun setAppNightMode(isNightMode : Boolean) {
         val nightModeFlags = if (isNightMode) {
