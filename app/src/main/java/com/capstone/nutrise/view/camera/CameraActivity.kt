@@ -81,7 +81,11 @@ class CameraActivity : AppCompatActivity() {
                         previewImageView.setImageBitmap(imageBitmap)
                     } catch (e: Exception) {
                         Log.e("CameraActivity", "Error displaying camera image", e)
-                        Toast.makeText(this, "Gagal menampilkan gambar dari kamera", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(
+                            this,
+                            "Gagal menampilkan gambar dari kamera",
+                            Toast.LENGTH_SHORT
+                        ).show()
                     }
                 } else {
                     Log.e("CameraActivity", "Bitmap is null")
@@ -139,5 +143,4 @@ class CameraActivity : AppCompatActivity() {
         private const val REQUEST_CODE_GALLERY = 100
         private const val REQUEST_CODE_CAMERA = 101
     }
-
 }
