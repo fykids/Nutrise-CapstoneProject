@@ -50,7 +50,7 @@
         android:background="@drawable/bg_circle"
         android:contentDescription="buttons"
         android:scaleType="centerInside"
-        android:src="@drawable/icon_button"
+        android:src="@drawable/baseline_galeri_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -63,7 +63,7 @@
         android:background="@drawable/bg_circle"
         android:contentDescription="buttons"
         android:scaleType="centerInside"
-        android:src="@drawable/icon_button"
+        android:src="@drawable/baseline_camera_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

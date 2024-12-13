@@ -6,11 +6,13 @@ import android.os.Build
 import android.os.Bundle
 import android.view.WindowInsets
 import android.view.WindowManager
+import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.capstone.nutrise.R
 import com.capstone.nutrise.databinding.ActivityHomeBinding
+import com.capstone.nutrise.view.camera.CameraActivity
 import com.capstone.nutrise.view.onboarding.OnBoardingActivity
 import com.capstone.nutrise.view.settings.SettingActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -53,7 +55,7 @@ class HomeActivity : AppCompatActivity() {
 
         val user = Firebase.auth.currentUser
 
-        binding.nameUser.text = user?.displayName?.takeIf { it.isNotEmpty() } ?: user?.email
+        binding.nameUser.text = user?.displayName?.takeIf { it.isNotEmpty() } ?: user?.email.orEmpty()
 
 //        binding.nameUser.text = user?.displayName?.takeIf { it.isNotEmpty() } ?: user?.email.toString()
 
@@ -75,6 +77,12 @@ class HomeActivity : AppCompatActivity() {
 
                 else -> false
             }
+        }
+        // Inisialisasi LinearLayout untuk membuka CameraActivity
+        val linearLayout2 = findViewById<LinearLayout>(R.id.linearLayout2)
+        linearLayout2.setOnClickListener {
+            val intent = Intent(this, CameraActivity::class.java)
+            startActivity(intent)
         }
     }
 
