@@ -96,7 +96,8 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("com.google.code.gson:gson:2.10")
     implementation("com.squareup.okhttp3:okhttp:4.10.0")
-    implementation("com.squareup.okio:okio:3.0.0") 
+    implementation("com.squareup.okio:okio:3.0.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.10.0")
 
     // Activity KTX
     implementation("androidx.activity:activity-ktx:1.7.2")
